@@ -9,17 +9,17 @@
 // applicare lo sconto nel caso che l'utente rientri nelle fasce d'età previste;
 
 // Ask km numbers
-let kmNumber = parseInt(prompt("How many km will you have to travel?"));
+const kmNumber = parseInt(prompt("How many km will you have to travel?"));
 // Ask age
-let age = parseInt(prompt("How old are you?"));
+const age = parseInt(prompt("How old are you?"));
 // Multiply Km numbers * ticket price
-let price = kmNumber * 0.21;
+const price = kmNumber * 0.21;
 
 // Minor age discount
-let minorDiscount = (price * 20) / 100;
+const minorDiscount = (price * 20) / 100;
 
 // Over 65 discount
-let overDiscount = (price * 40) / 100;
+const overDiscount = (price * 40) / 100;
 
 // Discount application
 if (age < 18) {

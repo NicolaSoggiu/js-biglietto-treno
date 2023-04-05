@@ -23,11 +23,11 @@ let overDiscount = (kmPrice * 40) / 100;
 
 // Discount application
 if (age < 18) {
-  kmPrice = kmPrice - minorDiscount;
+  kmPrice = kmPrice - minorDiscount.toFixed(2);
 } else if (age > 65) {
-  kmPrice = kmPrice - overDiscount;
+  kmPrice = kmPrice - overDiscount.toFixed(2);
 } else {
-  kmPrice;
+  kmPrice.toFixed(2);
 }
 
-document.getElementById("price").innerHTML = kmPrice;
+document.getElementById("price").innerHTML = kmPrice.toFixed(2);

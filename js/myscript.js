@@ -10,10 +10,13 @@
 
 // Ask km numbers
 const kmNumber = parseInt(prompt("How many km will you have to travel?"));
+console.log(kmNumber);
 // Ask age
 const age = parseInt(prompt("How old are you?"));
+console.log(age);
 // Multiply Km numbers * ticket price
 const price = kmNumber * 0.21;
+console.log("Your ticket price is" + " " + price.toFixed(2));
 
 // Minor age discount
 const minorDiscount = (price * 20) / 100;

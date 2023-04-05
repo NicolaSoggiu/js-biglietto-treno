@@ -13,21 +13,21 @@ let kmNumber = parseInt(prompt("How many km will you have to travel?"));
 // Ask age
 let age = parseInt(prompt("How old are you?"));
 // Multiply Km numbers * ticket price
-let kmPrice = kmNumber * 0.21;
+let price = kmNumber * 0.21;
 
 // Minor age discount
-let minorDiscount = (kmPrice * 20) / 100;
+let minorDiscount = (price * 20) / 100;
 
 // Over 65 discount
-let overDiscount = (kmPrice * 40) / 100;
+let overDiscount = (price * 40) / 100;
 
 // Discount application
 if (age < 18) {
-  kmPrice = kmPrice - minorDiscount.toFixed(2);
+  price = price - minorDiscount.toFixed(2);
 } else if (age > 65) {
-  kmPrice = kmPrice - overDiscount.toFixed(2);
+  price = price - overDiscount.toFixed(2);
 } else {
-  kmPrice.toFixed(2);
+  price.toFixed(2);
 }
 
-document.getElementById("price").innerHTML = kmPrice.toFixed(2);
+document.getElementById("price").innerHTML = price.toFixed(2);

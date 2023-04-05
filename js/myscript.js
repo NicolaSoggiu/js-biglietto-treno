@@ -9,28 +9,28 @@
 // applicare lo sconto nel caso che l'utente rientri nelle fasce d'età previste;
 
 // Ask km numbers
-const kmNumber = parseInt(prompt("How many km will you have to travel?"));
+let kmNumber = parseInt(prompt("How many km will you have to travel?"));
 console.log(kmNumber);
 // Ask age
-const age = parseInt(prompt("How old are you?"));
+let age = parseInt(prompt("How old are you?"));
 console.log(age);
 // Multiply Km numbers * ticket price
-const price = kmNumber * 0.21;
-console.log("Your ticket price is" + " " + price.toFixed(2));
+let kmPrice = kmNumber * 0.21;
+console.log("Il prezzo del tuo biglietto è:" + " " + kmPrice.toFixed(2));
 
 // Minor age discount
-const minorDiscount = (price * 20) / 100;
+let minorDiscount = (kmPrice * 20) / 100;
 
 // Over 65 discount
-const overDiscount = (price * 40) / 100;
+let overDiscount = (kmPrice * 40) / 100;
 
 // Discount application
 if (age < 18) {
-  price = price - minorDiscount.toFixed(2);
+  kmPrice = kmPrice - minorDiscount.toFixed(2);
 } else if (age > 65) {
-  price = price - overDiscount.toFixed(2);
+  kmPrice = kmPrice - overDiscount.toFixed(2);
 } else {
-  price.toFixed(2);
+  kmPrice.toFixed(2);
 }
 
-document.getElementById("price").innerHTML = price.toFixed(2);
+document.getElementById("price").innerHTML = kmPrice.toFixed(2);
